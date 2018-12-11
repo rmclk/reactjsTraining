@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Gerry Byrne and David Wilson - ReactJS Tutorials</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+</head>
+<body>
+<div id="contentgoeshere"></div>
+<script type="text/jsx">
+class CheckBox extends React.Component
+	{
+		constructor(props)
+		{
+			super(props)
+			this.handledChecked = this.handledChecked.bind(this)
+			this.state= {checked:true}
+		}
+
+		handledChecked()
+		{
+			this.setState({checked:!this.state.checked})
+		}
+
+        render()
+		{
+			var message
+
+			if(this.state.checked)
+				message = 'checked'
+			else
+				message = 'not checked'
+
+			return (
+				<div>
+					<input type = 'checkbox' onChange = {this.handledChecked} defaultChecked ={this.state.checked}/>
+					<h3>Home Insurance is {message}</h3>
+				</div>
+				);
+		}
+    };
+
+    ReactDOM.render(<CheckBox/>, document.getElementById('contentgoeshere'));
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body{
+	padding: 10px;
+/*	text-align: center;*/
+	font-family: arial;
+	font-size: 18px;
+}
+
+li{
+	list-style: none;
+	line-height: 2em;
+	text-align: left;
+}
+
+.header{
+	text-align: center;
+	background-color: #f4f4f4;
+	border-bottom: #ccc 3px solid;
+	padding: 20px;
+}
+
+.container{
+	width: 1000px;
+	margin:10px ;
+}
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+p{
+	display:inline;
+}
+
+label{
+	display:inline-block;
+	width:150px;
+	font-weight:bold;
+}
+input[type = "text"], input[type="password"], input[type = "number"]{
+	margin:10px;
+	width:150px;
+}
+
+

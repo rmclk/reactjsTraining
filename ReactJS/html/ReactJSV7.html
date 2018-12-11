@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Gerry Byrne - ReactJS Tutorials</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/4.0.0-0/react-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router/2.4.0/ReactRouter.min.js"></script>
+    <style>
+        body {
+          background-color: #33BDFF;
+          padding: 20px;
+          margin: 0;
+        }
+        h1, h2, p, ul, li {
+          font-family: Helvetica, Arial, sans-serif;
+        }
+        ul.header li {
+          display: inline;
+          list-style-type: none;
+          margin: 0;
+        }
+        ul.header {
+          background-color: #111;
+          padding: 0;
+        }
+        ul.header li a {
+          color: #FFF;
+          font-weight: bold;
+          text-decoration: none;
+          padding: 20px;
+          display: inline-block;
+        }
+        .content {
+          background-color: #FFFFFF;
+          padding: 20px;
+        }
+        .content h2 {
+          padding: 0;
+          margin: 0;
+        }
+        .content li {
+          margin-bottom: 10px;
+        }
+</style>
+</head>
+<body>
+<div id="contentgoeshere"></div>
+<script type="text/babel">
+        var {
+            Router,
+            Route,
+            IndexRoute,
+            IndexLink,
+            Link
+            } = ReactRouter;
+
+        class Home extends React.Component {
+        render() {
+            return (
+                    <div>
+                        <h2>Allstate NI Graduate Application</h2>
+                        <p>Allstate Northern Ireland, was established in Belfast in 1999
+                            to provide high quality software development services and business
+                            solutions in support of our U.S. parent's global operations.
+                            The Allstate Corporation is the largest publically held personal
+                            lines property and casualty insurer in America.</p>
+
+                        <p>Allstate Northern Ireland is committed to helping promote IT within
+                            the province with alliances with a number of organisations such as
+                            Invest Northern Ireland, The Department of Employment and Learning,
+                            Sync NI, Catalyst Inc, Letterkenny IT, CSIT and both of the universities
+                            in Northern Ireland, Queen's University Belfast and the University of Ulster.</p>
+                    </div>
+            );
+        }
+    }
+
+    class Angular extends React.Component
+{
+    render()
+    {
+        return (
+                <div>
+                    <h2>Allstate NI Graduate Application</h2>
+                    <p><h2>Declarative</h2>
+                        React makes it painless to create interactive UIs.
+                        Design simple views for each state in your application,
+                        and React will efficiently update and render just the
+                        right components when your data changes.
+
+                        Declarative views make your code more predictable and easier to debug.</p>
+
+                    <p>
+                        <h2>Component-Based</h2>
+                        Build encapsulated components that manage their own state, then compose
+                        them to make complex UIs. Since component logic is written in JavaScript
+                        instead of templates, you can easily pass rich data through your app
+                        and keep state out of the DOM.</p>
+                </div>
+        );
+    }
+};
+
+class Ember extends React.Component
+{
+    render()
+    {
+        return (
+                <div>
+                    <h2>Allstate NI Graduate Application</h2>
+                    <p><h2>Ember</h2>
+                        Ember.js is an open source JavaScript client-side framework for developing
+                        the web applications and uses the MVC(Model-View-Controller) architecture
+                        pattern. In Ember.js, route is used as model, handlebar template as view
+                        and controller manipulates the data in the model.</p>
+
+                    <p>
+                        <h2>Features</h2>
+                        <ul>
+                            <li>Ember.js is used for to creating reusable and maintainable JavaScript web applications.</li>
+
+                            <li>Ember.js views are created by using Handlebars templates and are simple to develop the front-end design.</li>
+
+                            <li>It automatically determines the route and controller during declaration of the route resources.</li>
+
+                            <li>Ember.js eliminates the boilerplate(the section of code that has to be included in various places without any alteration) and provides standard application architecture.</li>
+
+                            <li>Ember.js has HTML and CSS at the core of the development model.</li>
+
+                            <li>The routes are core features of the Ember.js which are used for to manage an URL's.</li>
+
+                            <li>It has extensive view type support.</li>
+
+                            <li>Ember.js uses templates that helps to automatically update the model, if contents of an applications gets change.</li>
+                        </ul>
+                    </p>
+                </div>
+        );
+    }
+};
+
+class Meteor extends React.Component
+{
+    render()
+    {
+        return (
+                <div>
+                    <h2>Allstate NI Graduate Application</h2>
+                    <p><h2>Meteor</h2>
+                        Meteor.js is a cohesive development platform, a collection of libraries
+                        and packages that are bound together in a tidy way to make web development easier.
+                        It builds on ideas from previous frameworks and libraries to offer an easy way
+                        to start a prototype app, but it gives you the tools and flexibility to build a
+                        full fledged production app. There are libraries like Tracker and Blaze that the
+                        Meteor Development Group has built specifically for a reactive front-end experience.</p>
+
+                    <p>
+                        <h2>Why is Meteor good?</h2>
+                        Meteor is a reactive, full stack JavaScript framework that allows developers to write single
+                        page apps for desktop and mobile. Simply put, Meteor is a collection of tools that developers
+                        use to write web apps that are fast and secure.
+
+                        The core concept of Meteor is reactivity. Real time syncing of data is built into Meteor at
+                        the core, but it does it in a different way. Instead of polling the server for updates every
+                        few seconds, a Meteor app maintains a low-data connection to a server using a protocol called DDP.
+                        DDP allows the server to send data to the client the instant it changes, since it had a continuous
+                        connection with it. Reactivity encompasses more than this, though. When a client changes a piece
+                        of data, Meteor renders the required UI change before the data gets sent to the server. This means
+                        that changes seem to happen instantly, as the app doesn't have to wait for a round trip to the
+                        server to complete.
+
+                        Meteor has a ton of other cool things, like a templating system called Blaze, a database on the
+                        client called Minimongo, and more. If you really are interested in learning Meteor, a book called
+                        Disover Meteor, at discovermeteor.com, is definitely the way to go. It teaches everything you
+                        need to know about Meteor, like routing, templating, subscriptions, publishing, and more, using
+                        a real app that you build as the book progresses. It's a really, really good book and will help
+                        you grasp the concepts of Meteor in only a few hours.
+                    </p>
+                </div>
+        );
+    }
+};
+
+    class App extends React.Component
+    {
+        render() {
+            return (
+                    <div>
+                        <h1>React Single Page Application</h1>
+                        <ul className="header">
+                            <li><Link to="/">React</Link></li>
+                            <li><Link to="/angular">Angular</Link></li>
+                            <li><Link to="/ember">Ember</Link></li>
+                            <li><Link to="/meteor">Meteor</Link></li>
+                        </ul>
+                        <div className="content">
+                            {this.props.children}
+                        </div>
+                    </div>
+            )
+        }
+    };
+
+        ReactDOM.render(
+            <ReactRouter.Router>
+                <ReactRouter.Route path="/" component={App}>
+                <IndexRoute component={Home}/>
+                <Route path="angular" component={Angular} />
+                <Route path="ember" component={Ember} />
+                <Route path="meteor" component={Meteor} />
+                </ReactRouter.Route>
+            </ReactRouter.Router>, document.getElementById('contentgoeshere'));
+
+</script>
+</body>
+</html>

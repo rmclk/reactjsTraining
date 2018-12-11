@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css"/>
+
+</head>
+<body>
+<div id="contentgoeshere"></div>
+
+<script type="text/jsx" src="../JS/PassingPropsBetweenComponents.js"></script>
+<script type="text/jsx">
+    class NameAndCourseDetails extends React.Component{
+        update(){
+            alert('Add business logic to update');
+        }
+        remove(){
+            alert('Add business logic to remove');
+        }
+        render(){
+            return(
+                <div>
+                    <h2>{this.props.lecturer} manages the course - {this.props.course}</h2>
+                    <button onClick={this.update}>UPDATE</button>
+                    <button onClick={this.remove}>REMOVE</button>
+                </div>
+            );
+        }
+    };
+    ReactDOM.render(<div><NameAndCourseDetails lecturer="Gerry Byrne" course="ReactJS" />
+            <NameAndCourseDetails lecturer="David Wilson" course="Angular 2" />
+            <NameAndCourseDetails lecturer="Dwyer Gorman" course="Emotional Intelligence" />
+            <NameAndCourseDetails lecturer="Gerry Byrne" course="JavaScript" />
+            </div>,
+            document.getElementById('contentgoeshere'));
+</script>
+
+<h2>Code Ran successfully</h2>
+
+</body>
+</html>
